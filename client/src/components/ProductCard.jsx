@@ -15,9 +15,9 @@ import {
 } from '@chakra-ui/react';
 import { FaOpencart } from 'react-icons/fa';
 import { Link as ReactLink } from 'react-router-dom';
-import { GiMoebiusStar as StarIcons } from 'react-icons/gi';
 
 import { useState } from 'react';
+import Rating from './Rating';
 
 const ProductCard = ({ product }) => {
   return (
@@ -69,6 +69,9 @@ const ProductCard = ({ product }) => {
           </Box>
         </Link>
       </Flex>
+      <Flex justifyContent='space-between' alignContent='center'>
+        <Rating rating={product.rating} numReviews={product.numReviews} />
+      </Flex>
       <Flex justify='space-around'>
         <Box fontSize='xl' color={useColorModeValue('gray.800', 'white')}>
           <Box as='span' color={'gray.600'} fontSize='lg'>
@@ -84,7 +87,13 @@ const ProductCard = ({ product }) => {
           fontSize='0.8rem'
         >
           <Button variant='ghost' display='flex' disabled={product.stock <= 0}>
-            <Icon as={FaOpencart} h={7} w={7} alignSelf='center' />
+            <Icon
+              as={FaOpencart}
+              h={7}
+              w={7}
+              alignSelf='center'
+              color='orange.500'
+            />
           </Button>
         </Tooltip>
       </Flex>
