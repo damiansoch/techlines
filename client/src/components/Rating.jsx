@@ -1,18 +1,4 @@
-import {
-  Flex,
-  HStack,
-  Circle,
-  Box,
-  Badge,
-  useColorModeValue,
-  Icon,
-  Button,
-  Tooltip,
-  Stack,
-  Link,
-  Image,
-  Text,
-} from '@chakra-ui/react';
+import { Flex, HStack, Icon, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { GiMoebiusStar as StarIcon } from 'react-icons/gi';
 

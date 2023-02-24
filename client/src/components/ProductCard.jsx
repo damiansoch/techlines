@@ -9,14 +9,11 @@ import {
   Tooltip,
   Stack,
   Link,
-  HStack,
   Image,
-  Text,
 } from '@chakra-ui/react';
 import { FaOpencart } from 'react-icons/fa';
 import { Link as ReactLink } from 'react-router-dom';
 
-import { useState } from 'react';
 import Rating from './Rating';
 
 const ProductCard = ({ product }) => {
